@@ -1,0 +1,32 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Bluetooth",
+  "description": "Powerful tool for managing Bluetooth devices",
+  "developer_name": "Rapha149",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "keyword",
+      "type": "keyword",
+      "name": "Keyword",
+      "default_value": "bt"
+    },
+    {
+      "id": "command_on",
+      "type": "input",
+      "name": "Command to turn on Bluetooth",
+      "description": "For the default one (\"bluetooth on\") you need the package \"tlp\".",
+      "default_value": "bluetooth on"
+    },
+    {
+      "id": "command_off",
+      "type": "input",
+      "name": "Command to turn off Bluetooth",
+      "description": "For the default one (\"bluetooth off\") you need the package \"tlp\".",
+      "default_value": "bluetooth off"
+    }
+  ]
+}
