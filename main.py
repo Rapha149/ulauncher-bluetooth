@@ -113,7 +113,7 @@ class BluetoothExtension(Extension):
         if adapter is None:
             return RenderResultListAction([
                 ExtensionResultItem(icon='images/icon.png',
-                                    name='Turn on Bluetooth',
+                                    name='Turn Bluetooth on',
                                     highlightable=False,
                                     on_enter=ExtensionCustomAction({'keyword': keyword,
                                                                     'last_input': arg,
@@ -140,7 +140,7 @@ class BluetoothExtension(Extension):
 
             items.extend([
                 ExtensionResultItem(icon='images/icon.png',
-                                    name='Turn off Bluetooth',
+                                    name='Turn Bluetooth off',
                                     highlightable=False,
                                     on_enter=ExtensionCustomAction({'keyword': keyword,
                                                                     'last_input': arg,
