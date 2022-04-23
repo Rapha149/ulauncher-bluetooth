@@ -18,7 +18,7 @@ from wrapt_timeout_decorator import timeout
 
 from bt_tools import BtTools
 
-IMAGES_PATH = Path(__file__).parent / 'images'
+images_path = Path(__file__).parent / 'images'
 
 
 def wait(condition, check_condition, wait_timeout):
@@ -94,7 +94,7 @@ def get_icon(device):
     icon = icon_str.split('-', 2)[0]
     icon_type = '2' if connected else '1' if paired else '0'
     file_name = f'{icon}_{icon_type}.png'
-    if (IMAGES_PATH / file_name).is_file():
+    if (images_path / file_name).is_file():
         return f'images/{file_name}'
     else:
         return f'images/default_{icon_type}.png'
