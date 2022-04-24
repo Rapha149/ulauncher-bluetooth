@@ -140,12 +140,6 @@ class BluetoothExtension(Extension):
 
             items.extend([
                 ExtensionResultItem(icon='images/icon.png',
-                                    name='Turn Bluetooth off',
-                                    highlightable=False,
-                                    on_enter=ExtensionCustomAction({'keyword': keyword,
-                                                                    'last_input': arg,
-                                                                    'action': Action.TURN_OFF}, keep_app_open=True)),
-                ExtensionResultItem(icon='images/icon.png',
                                     name='Change adapter settings',
                                     description='Edit alias and manage discovery and pairing mode',
                                     highlightable=False,
@@ -179,6 +173,14 @@ class BluetoothExtension(Extension):
                                                     'action': Action.START_SCAN}, keep_app_open=True)
                 ))
 
+            items.append(ExtensionResultItem(
+                icon='images/icon.png',
+                name='Turn Bluetooth off',
+                highlightable=False,
+                on_enter=ExtensionCustomAction({'keyword': keyword,
+                                                'last_input': arg,
+                                                'action': Action.TURN_OFF}, keep_app_open=True)
+            ))
             return RenderResultListAction(items)
 
         args = arg.split(' ')
