@@ -552,7 +552,7 @@ class BluetoothExtension(Extension):
                                                         'alias': alias}, keep_app_open=True)
                     ))
 
-                items.append(go_back_item(keyword, name='Cancel', new_input=f'{keyword} {args[0]} {address}'))
+                items.append(go_back_item(keyword, name='Cancel', new_input=f'{args[0]} {address}'))
                 return RenderResultListAction(items)
 
 
